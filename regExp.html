@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>createElement() Example</title>
+     <script type="text/javascript">
+        function makeList(){
+          // //var iterator = null;
+          // var oDdiv = document.getElementById("div1");
+          // var iterator = document.createNodeIterator(oDiv,NodeFilter.SHOW_ELEMENT,null,false);
+
+          //   var oOutput = document.getElementById("text1");
+          //   var oNode = iterator.nextNode();
+          // while(oNode){
+          //   oOutput.value+=oNode.tagName + "\n";
+          //   oNode = oNode.nextNode();
+          // }
+          var sToChange = "The sky is red";
+          var reRed = /red/;
+          var sResultText = sToChange.replace(reRed,function(aaa){
+            return "blue";
+          });
+          alert(sResultText);
+       }
+//        function makeList(){
+//        var div = document.getElementById("div1");
+// var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+// var node = iterator.nextNode();
+// alert("aaa");
+// while(node !== null){
+//     console.log(node.nodeName); //输出标签名
+//     node = iterator.nextNode();
+//}
+//}
+     </script>
+   </head>
+   <body>
+      
+<div id="div1">
+    <p><b>Hello</b> world!</p>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+</div>
+
+      <textarea rows="10" cols="40" id="text1"></textarea><br/>
+      <input type="button" value="make list" onclick="makeList()" />
+   </body>
+</html>

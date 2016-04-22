@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>createElement() Example</title>
+     <script type="text/javascript">
+//        function f1(){
+
+// 　　　　var n=999;
+
+// 　　　　function f2(){
+// 　　　　　　alert(n);
+// 　　　　}
+
+// 　　　　return f2;
+
+// 　　}
+
+// 　　var result=f1();
+
+// 　　result(); // 999
+//        function f1(){
+
+// 　　　　var n=999;
+
+// 　　　　nAdd=function(){n+=1}
+
+// 　　　　function f2(){
+// 　　　　　　alert(n);
+// 　　　　}
+
+// 　　　　return f2;
+
+// 　　}
+
+// 　　var result=f1();
+
+// 　　result(); // 999
+
+// 　　nAdd();
+
+// 　　result(); // 1000
+function Person(){    
+    var name = "default";       
+       
+    return {    
+       getName : function(){    
+           return name;    
+       },    
+       setName : function(newName){    
+           name = newName;    
+       }    
+    }    
+    };   
+ 
+    var p = new Person();
+    alert(p.getName());
+    p.setName("Tom");
+    alert(p.getName());
+ 
+    var Jack = function(){};
+    //继承自Person
+    Jack.prototype = new Person();
+    //添加私有方法
+    Jack.prototype.Say = function(){
+        alert("Hello,my name is Jack");
+    };
+    var j = new Jack();
+    j.setName("Jack");
+    j.Say();
+    alert(j.getName());
+     </script>
+   </head>
+   <body>
+   </body>
+</html>

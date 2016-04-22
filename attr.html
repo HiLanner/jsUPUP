@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>attribute() Example</title>
+     <script type="text/javascript">
+        function attribute(){
+        	 var oImg = document.body.getElementsByTagName("img")[0];
+           alert(oImg.getAttribute("src"));
+           alert(oImg.getAttribute("border"));
+           oImg.setAttribute("src","2.jpg");
+           oImg.setAttribute("border","1");
+          //alert(oImg.src);
+          //alert(oImg.border);
+         // oImg.src = "2.jpg";
+         // oImg.border = "1px solid #000";
+        }
+     </script>
+   </head>
+   <body onload="attribute()">
+         <img src="1.jpeg"/>
+   </body>
+</html>

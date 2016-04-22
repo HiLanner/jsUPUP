@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>appendChild() Example</title>
+     <script type="text/javascript">
+        // function appendMessage(){
+        //   var arrText = ["first","second","third","forth","fifth","sixth","seventh","eighth","ninth","tnth"];
+        //   for (var i = 0; i < arrText.length; i++) {
+        //   var oNewP = document.createElement("p");
+        //   var oText = document.createTextNode(arrText[i]);
+        //   oNewP.appendChild(oText);
+        //   document.body.appendChild(oNewP);
+        //  }
+        // }
+        //文档碎片
+        function appendMessage(){
+          var arrText = ["first","second","third","forth","fifth","sixth","seventh","eighth","ninth","tnth"];
+          var oFragment = document.createDocumentFragment();
+          for (var i = 0; i < arrText.length; i++) {
+          var oNewP = document.createElement("p");
+          var oText = document.createTextNode(arrText[i]);
+          oNewP.appendChild(oText);
+          oFragment.appendChild(oNewP);
+         }
+         document.body.appendChild(oFragment);
+        }
+     </script>
+   </head>
+   <body onload="appendMessage()">
+      <p>hello world</p>  
+   </body>
+</html>

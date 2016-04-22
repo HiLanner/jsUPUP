@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>createElement() Example</title>
+     <script type="text/javascript">
+     function Person(){}
+     Person.prototype = {
+      constructor:Person,
+      name:"nike",
+      age:"20",
+      job:"soft",
+      friengs:["aa","bb","cc"],
+      sayName:function(){
+        alert(this.name);
+        }
+      };
+      var person1 = new Person();
+      var person2 = new Person();
+      //person1.friengs.push("van");
+      //person1.sayName();
+      person1.name = "lanner";
+      person1.friengs=["1","2","3'[[p"];
+      alert(person1.name);
+      alert(person2.name);
+      alert(person1.friengs);
+      alert(person2.friengs);
+      alert(person1.friengs == person2.friengs);
+     </script>
+   </head>
+   <body>
+   </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>removeChild() Example</title>
+     <script type="text/javascript">
+        function removeMessage(){
+        	var oP = document.body.getElementsByTagName("p")[0];
+          //document.body.removeChild(oP);//必须加body
+          oP.parentNode.removeChild(oP);
+        }
+     </script>
+   </head>
+   <body onload="removeMessage()">
+      <p>hello world</p>
+   </body>
+</html>

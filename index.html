@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="utf-8"/>
+     <title>createElement() Example</title>
+     <script type="text/javascript">
+        function createMessage(){
+        	var oP = document.createElement("p");
+        	var oText = document.createTextNode("heello world");
+        	oP.appendChild(oText);
+        	document.body.appendChild(oP);
+        }
+     </script>
+   </head>
+   <body onload="createMessage()">
+
+   </body>
+</html>
